@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GreenDaoDemo</string>
+
+    <array name="spinner">
+        <item>國文</item>
+        <item>英文</item>
+        <item>數學</item>
+        <item>社會</item>
+    </array>
+</resources>
