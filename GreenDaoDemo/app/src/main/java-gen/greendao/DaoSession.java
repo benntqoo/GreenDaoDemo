@@ -17,7 +17,7 @@ import greendao.studentDao;
 
 /**
  * {@inheritDoc}
- * 
+ *
  * @see de.greenrobot.dao.AbstractDaoSession
  */
 public class DaoSession extends AbstractDaoSession {
@@ -37,7 +37,7 @@ public class DaoSession extends AbstractDaoSession {
 
         registerDao(student.class, studentDao);
     }
-    
+
     public void clear() {
         studentDaoConfig.getIdentityScope().clear();
     }

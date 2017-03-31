@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="spinner_item">
+        <item></item>
         <item>國文</item>
         <item>英文</item>
         <item>數學</item>
