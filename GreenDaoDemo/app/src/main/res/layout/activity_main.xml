@@ -1,18 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ben.greendaodemo.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="搜尋" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearch"
+        android:text="新增" />
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnInsert"
+        android:text="刪除" />
+
+    <TextView
+        android:id="@+id/txtTittleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnSearch"
+        android:layout_toRightOf="@id/btnSearch"
+        android:text="姓名" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txtTittleName" />
+
+    <TextView
+        android:id="@+id/txtTittlePoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnSearch"
+        android:layout_toRightOf="@id/editName"
+        android:text="分數" />
+
+    <EditText
+        android:id="@+id/editPoint"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txtTittlePoint" />
+
+    <TextView
+        android:id="@+id/txtTittleKinds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnInsert"
+        android:layout_below="@id/txtTittleName"
+        android:layout_toRightOf="@id/btnInsert"
+        android:text="科目" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txtTittleKinds"
+        android:layout_toRightOf="@id/txtTittleKinds" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnDelete"
+        android:layout_marginLeft="200px"
+        android:layout_toRightOf="@id/btnDelete"
+        android:text="取消" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnCancel"
+        android:layout_toRightOf="@id/btnCancel"
+        android:text="確定" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnDelete">
+
+        <ListView
+            android:layout_margin="5dp"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</RelativeLayout>
